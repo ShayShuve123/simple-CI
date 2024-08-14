@@ -1,5 +1,7 @@
 import unittest
 from main import add, subtract, mult, div
+import xmlrunner
+
 
 class TestMain(unittest.TestCase):
     
@@ -16,6 +18,10 @@ class TestMain(unittest.TestCase):
         self.assertEqual(div(8, 4), 2)
 
 if __name__ == '__main__':
-    unittest.main()        
-        
+    # Create the directory if it does not exist
+    if not os.path.exists('test-reports'):
+        os.makedirs('test-reports')
+    
+    with open('test-reports/results.xml', 'wb') as output:
+        unittest.main(testRunner=xmlrunner.XMLTestRunner(output=output))      
         
