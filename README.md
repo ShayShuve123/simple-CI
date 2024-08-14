@@ -1,4 +1,4 @@
-# Jenkins CI Pipeline Example
+# Jenkins CI Pipeline 
 
 This project demonstrates a Continuous Integration (CI) pipeline using Jenkins to automate testing for a simple Python project.
 
